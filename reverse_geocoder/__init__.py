@@ -61,6 +61,7 @@ RG_COLUMNS = [
     'lat',
     'lon',
     'name',
+    'geoNameId',
     'admin1',
     'admin2',
     'cc'
@@ -213,6 +214,7 @@ class RGeocoder(object):
                 lon = row[GN_COLUMNS['longitude']]
                 name = row[GN_COLUMNS['asciiName']]
                 cc = row[GN_COLUMNS['countryCode']]
+                geo_name_id = row[GN_COLUMNS['geoNameId']]
 
                 admin1_c = row[GN_COLUMNS['admin1Code']]
                 admin2_c = row[GN_COLUMNS['admin2Code']]
@@ -231,6 +233,7 @@ class RGeocoder(object):
                 write_row = {'lat':lat,
                              'lon':lon,
                              'name':name,
+                             'geoNameId': geo_name_id,
                              'admin1':admin1,
                              'admin2':admin2,
                              'cc':cc}
