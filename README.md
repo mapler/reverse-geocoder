@@ -2,7 +2,7 @@ Reverse Geocoder
 =================
 A Python library for offline reverse geocoding. It improves on an existing library called [reverse_geocode](https://pypi.python.org/pypi/reverse_geocode/1.0) developed by [Richard Penman](https://bitbucket.org/richardpenman/reverse_geocode).
 
-*UPDATE (15-Sep-16)*: v1.5.1 released! See release notes below.
+*UPDATE (2023/03/08)*: Add geoNameId to data. by [@mapler](https://github.com/mapler)
 
 ### About
 Ajay Thampi | [@thampiman](https://twitter.com/thampiman) | [opensignal.com](http://opensignal.com) | [ajaythampi.com](http://ajaythampi.com)
@@ -16,6 +16,7 @@ By default, the K-D tree is populated with cities that have a population > 1000.
 - `lat`: Latitude
 - `lon`: Longitude
 - `name`: Name of place
+- `geoNameId`: Id from GeoNames
 - `admin1`: Admin 1 region
 - `admin2`: Admin 2 region
 - `cc`: ISO 3166-1 alpha-2 country code
@@ -70,18 +71,21 @@ The above code will output the following:
       'cc': 'GB', 
       'lat': '51.51116',
       'lon': '-0.18426', 
+      'geoNameId': '6545243',
       'admin1': 'England', 
       'admin2': 'Greater London'}, 
      {'name': 'Cochin', 
       'cc': 'IN', 
       'lat': '9.93988',
       'lon': '76.26022', 
+      'geoNameId': '1273874',
       'admin1': 'Kerala', 
       'admin2': 'Ernakulam'},
      {'name': 'Mountain View', 
       'cc': 'US', 
       'lat': '37.38605',
       'lon': '-122.08385', 
+      'geoNameId': '5375480',
       'admin1': 'California', 
       'admin2': 'Santa Clara County'}]
 ```
